@@ -26,7 +26,7 @@ jobs:
           context: .
           platforms: linux/arm64/v8,linux/arm/v7
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/expressvpn:latest , ${{ secrets.DOCKERHUB_USERNAME }}/expressvpn:3.34.1.0-1
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/expressvpn:latest , ${{ secrets.DOCKERHUB_USERNAME }}/expressvpn:${{ secrets.EXPRESSVPN_VERSION}}
           build-args: |
-            NUM=3.34.1.0-1
+            NUM=${{ secrets.EXPRESSVPN_VERSION}}
             PLATFORM=armhf
